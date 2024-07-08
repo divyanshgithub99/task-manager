@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import Login from './components/Login';
+import Signup from './components/Signup';
+import TaskList from './components/TaskList';
+import authService from './services/authService';
 
-function App() {
+const App = () => {
+  const user = authService.getCurrentUser();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <header className="App-header">
+        </header>
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/tasks" element={user ? <TaskList /> : <Navigate to="/login" />} />
+          <Route path="*" element={<Navigate to="/tasks" />} />
+        </Routes>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;

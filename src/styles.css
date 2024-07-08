@@ -1,0 +1,137 @@
+/* Base styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1, h2, h3 {
+    color: #343a40;
+  }
+  
+  button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+  }
+  
+  /* Form styles */
+  form {
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Task list styles */
+  .task-list {
+    margin-top: 20px;
+  }
+  
+  .task-item {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .task-item:last-child {
+    margin-bottom: 0;
+  }
+  
+  .task-item.completed {
+    background-color: #f0f0f0;
+    text-decoration: line-through;
+    color: #999;
+  }
+  
+  .task-item .task-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #343a40;
+    margin-bottom: 5px;
+  }
+  
+  .task-item .task-description {
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .task-item .task-buttons button {
+    margin-left: 10px;
+    background-color: #dc3545;
+    color: #fff;
+    border-radius: 4px;
+    padding: 6px 12px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .task-item .task-buttons button:hover {
+    background-color: #c82333;
+  }
+  
+  .task-item .task-buttons button.complete {
+    background-color: #28a745;
+  }
+  
+  .task-item .task-buttons button.complete:hover {
+    background-color: #218838;
+  }
+  
+  /* Filter styles */
+  .filter {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+  }
+  
+  .filter button {
+    margin-left: 10px;
+    background-color: #6c757d;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .filter button.active {
+    background-color: #007bff;
+  }
+      
