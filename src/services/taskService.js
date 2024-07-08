@@ -4,7 +4,7 @@ import authHeader from './authHeader';
 const API_URL = 'http://localhost:5000/tasks/';
 
 const getTasks = () => {
-  return axios.get(API_URL, { headers: authHeader() }); // Ensure authHeader includes token
+  return axios.get(API_URL, { headers: authHeader() });
 };
 
 const createTask = (task) => {
